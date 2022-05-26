@@ -1,0 +1,4 @@
+C:\Users\loren\Desktop\erp-crm\src\LTuri.Abp.Application\obj\Release\net6.0\QueryLexer.cs
+C:\Users\loren\Desktop\erp-crm\src\LTuri.Abp.Application\obj\Release\net6.0\QueryParser.cs
+C:\Users\loren\Desktop\erp-crm\src\LTuri.Abp.Application\obj\Release\net6.0\QueryVisitor.cs
+C:\Users\loren\Desktop\erp-crm\src\LTuri.Abp.Application\obj\Release\net6.0\QueryBaseVisitor.cs

@@ -1,0 +1,692 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LTuri.Abp.Application</name>
+    </assembly>
+    <members>
+        <member name="T:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1">
+            <summary>
+            This interface defines a complete generic visitor for a parse tree produced
+            by <see cref="T:LTuri.Abp.Application.Antlr.Query.QueryParser"/>.
+            </summary>
+            <typeparam name="Result">The return type of the visit operation.</typeparam>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterIAny(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterIAnyContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterIAny</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterIContains(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterIContainsContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterIContains</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterContains(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterContainsContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterContains</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterStarts(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterStartsContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterStarts</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterEnds(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterEndsContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterEnds</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterGte(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterGteContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterGte</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterLte(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterLteContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterLte</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterIStarts(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterIStartsContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterIStarts</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterILt(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterILtContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterILt</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterIFull(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterIFullContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterIFull</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterIEq(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterIEqContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterIEq</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterILte(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterILteContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterILte</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterIGt(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterIGtContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterIGt</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterEq(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterEqContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterEq</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterIEnds(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterIEndsContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterIEnds</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterGt(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterGtContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterGt</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterIGte(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterIGteContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterIGte</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterAny(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterAnyContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterAny</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterLt(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterLtContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterLt</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilterFull(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterFullContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterFull</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitExpressionNot(LTuri.Abp.Application.Antlr.Query.QueryParser.ExpressionNotContext)">
+            <summary>
+            Visit a parse tree produced by the <c>ExpressionNot</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.expression"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitExpressionAnd(LTuri.Abp.Application.Antlr.Query.QueryParser.ExpressionAndContext)">
+            <summary>
+            Visit a parse tree produced by the <c>ExpressionAnd</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.expression"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitExpressionOr(LTuri.Abp.Application.Antlr.Query.QueryParser.ExpressionOrContext)">
+            <summary>
+            Visit a parse tree produced by the <c>ExpressionOr</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.expression"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitExpressionFilter(LTuri.Abp.Application.Antlr.Query.QueryParser.ExpressionFilterContext)">
+            <summary>
+            Visit a parse tree produced by the <c>ExpressionFilter</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.expression"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitExpressionParenthesis(LTuri.Abp.Application.Antlr.Query.QueryParser.ExpressionParenthesisContext)">
+            <summary>
+            Visit a parse tree produced by the <c>ExpressionParenthesis</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.expression"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitQuery(LTuri.Abp.Application.Antlr.Query.QueryParser.QueryContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.query"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitExpression(LTuri.Abp.Application.Antlr.Query.QueryParser.ExpressionContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.expression"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1.VisitFilter(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="T:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1">
+            <summary>
+            This class provides an empty implementation of <see cref="T:LTuri.Abp.Application.Antlr.Query.IQueryVisitor`1"/>,
+            which can be extended to create a visitor which only needs to handle a subset
+            of the available methods.
+            </summary>
+            <typeparam name="Result">The return type of the visit operation.</typeparam>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterIAny(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterIAnyContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterIAny</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterIContains(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterIContainsContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterIContains</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterContains(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterContainsContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterContains</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterStarts(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterStartsContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterStarts</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterEnds(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterEndsContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterEnds</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterGte(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterGteContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterGte</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterLte(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterLteContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterLte</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterIStarts(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterIStartsContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterIStarts</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterILt(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterILtContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterILt</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterIFull(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterIFullContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterIFull</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterIEq(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterIEqContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterIEq</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterILte(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterILteContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterILte</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterIGt(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterIGtContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterIGt</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterEq(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterEqContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterEq</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterIEnds(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterIEndsContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterIEnds</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterGt(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterGtContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterGt</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterIGte(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterIGteContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterIGte</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterAny(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterAnyContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterAny</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterLt(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterLtContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterLt</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilterFull(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterFullContext)">
+            <summary>
+            Visit a parse tree produced by the <c>FilterFull</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitExpressionNot(LTuri.Abp.Application.Antlr.Query.QueryParser.ExpressionNotContext)">
+            <summary>
+            Visit a parse tree produced by the <c>ExpressionNot</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.expression"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitExpressionAnd(LTuri.Abp.Application.Antlr.Query.QueryParser.ExpressionAndContext)">
+            <summary>
+            Visit a parse tree produced by the <c>ExpressionAnd</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.expression"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitExpressionOr(LTuri.Abp.Application.Antlr.Query.QueryParser.ExpressionOrContext)">
+            <summary>
+            Visit a parse tree produced by the <c>ExpressionOr</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.expression"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitExpressionFilter(LTuri.Abp.Application.Antlr.Query.QueryParser.ExpressionFilterContext)">
+            <summary>
+            Visit a parse tree produced by the <c>ExpressionFilter</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.expression"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitExpressionParenthesis(LTuri.Abp.Application.Antlr.Query.QueryParser.ExpressionParenthesisContext)">
+            <summary>
+            Visit a parse tree produced by the <c>ExpressionParenthesis</c>
+            labeled alternative in <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.expression"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitQuery(LTuri.Abp.Application.Antlr.Query.QueryParser.QueryContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.query"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitExpression(LTuri.Abp.Application.Antlr.Query.QueryParser.ExpressionContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.expression"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Antlr.Query.QueryBaseVisitor`1.VisitFilter(LTuri.Abp.Application.Antlr.Query.QueryParser.FilterContext)">
+            <summary>
+            Visit a parse tree produced by <see cref="M:LTuri.Abp.Application.Antlr.Query.QueryParser.filter"/>.
+            <para>
+            The default implementation returns the result of calling <see cref="M:Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)"/>
+            on <paramref name="context"/>.
+            </para>
+            </summary>
+            <param name="context">The parse tree.</param>
+            <return>The visitor result.</return>
+        </member>
+        <member name="M:LTuri.Abp.Application.Repositories.AggregationApplier`2.Avg(System.Collections.Generic.IEnumerable{`0},System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.MemberExpression)">
+            <summary>
+            Average of all numeric values for the specified field
+            </summary>
+        </member>
+        <member name="M:LTuri.Abp.Application.Repositories.AggregationApplier`2.Count(System.Collections.Generic.IEnumerable{`0},System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.MemberExpression)">
+            <summary>
+            Number of records for the specified field (where is not null)
+            </summary>
+        </member>
+        <member name="M:LTuri.Abp.Application.Repositories.AggregationApplier`2.Max(System.Collections.Generic.IEnumerable{`0},System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.MemberExpression)">
+            <summary>
+            Maximum value for the specified field
+            </summary>
+        </member>
+        <member name="M:LTuri.Abp.Application.Repositories.AggregationApplier`2.Min(System.Collections.Generic.IEnumerable{`0},System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.MemberExpression)">
+            <summary>
+            Minimal value for the specified field
+            </summary>
+        </member>
+        <member name="M:LTuri.Abp.Application.Repositories.AggregationApplier`2.Sum(System.Collections.Generic.IEnumerable{`0},System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.MemberExpression)">
+            <summary>
+            Sum of all numeric values for the specified field
+            </summary>
+        </member>
+        <member name="M:LTuri.Abp.Application.Repositories.AggregationApplier`2.Stats(System.Collections.Generic.IEnumerable{`0},System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.MemberExpression)">
+            <summary>
+            Stats overall numeric values for the specified field (Avg, Count, Max, Min, Sum)
+            </summary>
+        </member>
+        <member name="M:LTuri.Abp.Application.Repositories.AggregationApplier`2.Group(System.Collections.Generic.IEnumerable{`0},System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.MemberExpression)">
+            <summary>
+            Groups the results for each value of the provided field
+            </summary>
+        </member>
+        <member name="M:LTuri.Abp.Application.Repositories.AggregationApplier`2.Histogram(System.Collections.Generic.IEnumerable{`0},System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.MemberExpression)">
+            <summary>
+            Groups the result for each value of the provided field, by using an histogram aggregation
+            (grouped by minute, hour, day, week, month, quarter, year, day)
+            </summary>
+        </member>
+        <member name="T:LTuri.Abp.Application.Repositories.Criteria.Criteria">
+            <summary>
+            Rappresents filters on the IQueriable
+            
+            TODO: return type? (xml,json, csv etc...) --> tried but not working, not prio
+            </summary>
+        </member>
+        <member name="T:LTuri.Abp.Application.Repositories.Criteria.CriteriaAggregation">
+            <summary>
+            Request for an aggregation over the data.
+            </summary>
+        </member>
+        <member name="T:LTuri.Abp.Application.Repositories.Criteria.CriteriaFilter">
+            <summary>
+            Rappresent a single filter
+            Depending on Type, the properties Field, Value and Filters are used
+            </summary>
+        </member>
+        <member name="F:LTuri.Abp.Application.Repositories.Criteria.Enum.AggregationType.Avg">
+            Normal aggregations, returns value
+        </member>
+        <member name="F:LTuri.Abp.Application.Repositories.Criteria.Enum.AggregationType.Group">
+            Grouping aggregation, returns list
+        </member>
+        <member name="M:LTuri.Abp.Application.Repositories.FilterApplier`1.Equal(System.Linq.Expressions.MemberExpression,System.Object,LTuri.Abp.Application.Repositories.Criteria.Enum.FilterBehaviour)">
+            <summary>
+            Extract a lambda that uses a EQUAL filter
+            </summary>
+        </member>
+        <member name="M:LTuri.Abp.Application.Repositories.FilterApplier`1.Contains(System.Linq.Expressions.MemberExpression,System.Object,LTuri.Abp.Application.Repositories.Criteria.Enum.FilterBehaviour)">
+            <summary>
+            Extract a lambda that uses a CONTAINS filter
+            </summary>
+        </member>
+        <member name="M:LTuri.Abp.Application.Repositories.FilterApplier`1.StartsWith(System.Linq.Expressions.MemberExpression,System.Object,LTuri.Abp.Application.Repositories.Criteria.Enum.FilterBehaviour)">
+            <summary>
+            Extract a lambda that uses a CONTAINS filter
+            </summary>
+        </member>
+        <member name="M:LTuri.Abp.Application.Repositories.FilterApplier`1.EndsWith(System.Linq.Expressions.MemberExpression,System.Object,LTuri.Abp.Application.Repositories.Criteria.Enum.FilterBehaviour)">
+            <summary>
+            Extract a lambda that uses a CONTAINS filter
+            </summary>
+        </member>
+        <member name="M:LTuri.Abp.Application.Repositories.FilterApplier`1.Greater(System.Linq.Expressions.MemberExpression,System.Object,LTuri.Abp.Application.Repositories.Criteria.Enum.FilterBehaviour)">
+            <summary>
+            Extract a lambda that uses a GREATER filter
+            </summary>
+        </member>
+        <member name="M:LTuri.Abp.Application.Repositories.FilterApplier`1.Lower(System.Linq.Expressions.MemberExpression,System.Object,LTuri.Abp.Application.Repositories.Criteria.Enum.FilterBehaviour)">
+            <summary>
+            Extract a lambda that uses a LOWER filter
+            </summary>
+        </member>
+        <member name="M:LTuri.Abp.Application.Repositories.FilterApplier`1.GreaterEquals(System.Linq.Expressions.MemberExpression,System.Object,LTuri.Abp.Application.Repositories.Criteria.Enum.FilterBehaviour)">
+            <summary>
+            Extract a lambda that uses a GREATER EQUALS filter
+            </summary>
+        </member>
+        <member name="M:LTuri.Abp.Application.Repositories.FilterApplier`1.LowerEquals(System.Linq.Expressions.MemberExpression,System.Object,LTuri.Abp.Application.Repositories.Criteria.Enum.FilterBehaviour)">
+            <summary>
+            Extract a lambda that uses a LOWER EQUALS filter
+            </summary>
+        </member>
+        <member name="M:LTuri.Abp.Application.Repositories.FilterApplier`1.And(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}[])">
+            <summary>
+            Extract a lambda that uses AND concatenations
+            </summary>
+        </member>
+        <member name="M:LTuri.Abp.Application.Repositories.FilterApplier`1.Or(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}[])">
+            <summary>
+            Extract a lambda that uses OR concatenations
+            </summary>
+        </member>
+    </members>
+</doc>
