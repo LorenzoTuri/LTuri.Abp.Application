@@ -1,10 +1,12 @@
 # LTuri.Abp.Application
 
-## How to use it:
+# How to use it:
 
 install package LTuri.Abp.Application from nuget
 
 >>> dotnet add package LTuri.Abp.Application
+
+# Usage
 
 ## Create your entities (ex. here) -> Domain, and configure them in DbContext
 
