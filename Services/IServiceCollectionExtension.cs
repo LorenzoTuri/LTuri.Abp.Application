@@ -8,6 +8,12 @@ using Volo.Abp.Domain.Repositories;
 
 namespace LTuri.Abp.Application.Services
 {
+    /// <summary>
+    /// TODO: refactor -> this is not enough.
+    /// Provide true entity and not only the IWebhookQueueEntity 
+    /// Provide some way to use only local events
+    /// Provide a service that automatically calls webhookEvents
+    /// </summary>
     public static class IServiceCollectionExtension
     {
         public static IServiceCollection AddWebhookEventBus<TWebhookQueueEntity>(
