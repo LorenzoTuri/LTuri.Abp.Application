@@ -23,7 +23,6 @@ namespace LTuri.Abp.Application.Services
     /// <typeparam name="TUpdateInputDto"></typeparam>
     /// <typeparam name="TEntityCreateEvent"></typeparam>
     /// <typeparam name="TEntityUpdateEvent"></typeparam>
-    /// <typeparam name="TWebHookEventEntity"></typeparam>
     public abstract class AbstractTranslatableApplicationService<
         // Entity config
         TEntity,
@@ -38,8 +37,7 @@ namespace LTuri.Abp.Application.Services
         TUpdateInputDto,
         // Event config
         TEntityCreateEvent,
-        TEntityUpdateEvent,
-        TWebHookEventEntity
+        TEntityUpdateEvent
         > : AbstractApplicationService<
             TEntity,
             TGetOutputDto,
@@ -47,8 +45,7 @@ namespace LTuri.Abp.Application.Services
             TCreateInputDto,
             TUpdateInputDto,
             TEntityCreateEvent,
-            TEntityUpdateEvent,
-            TWebHookEventEntity
+            TEntityUpdateEvent
             >
         where TEntity : class, IEntity<Guid>, ITranslatableEntity<TEntityTranslation>, IIdentifiableEntity
         where TEntityTranslation : ITranslationEntity
@@ -56,7 +53,6 @@ namespace LTuri.Abp.Application.Services
         where TListOutputDto : IEntityDto<Guid>
         where TEntityCreateEvent : AbstractEvent, new()
         where TEntityUpdateEvent : AbstractEvent, new()
-        where TWebHookEventEntity : class, IWebhookQueueEntity, IEntity, new()
     {
 
         protected IEfCoreRepository<TEntity, Guid> repository;
@@ -66,7 +62,7 @@ namespace LTuri.Abp.Application.Services
             IAbpLazyServiceProvider lazyServiceProvider,
             IEfCoreRepository<TEntity, Guid> repository,
             IObjectMapper objectMapper,
-            AggregatedEventBus<TWebHookEventEntity> eventBus
+            AggregatedEventBus eventBus
         ) : base(lazyServiceProvider, repository, objectMapper, eventBus)
         {
             this.repository = repository;

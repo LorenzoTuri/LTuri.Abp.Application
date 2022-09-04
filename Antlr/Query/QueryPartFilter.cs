@@ -3,6 +3,9 @@ using LTuri.Abp.Application.Repositories.Criteria.Enum;
 
 namespace LTuri.Abp.Application.Antlr.Query
 {
+    /// <summary>
+    /// TODO: can be ractored in order to support SOLID?
+    /// </summary>
     public class QueryPartFilter : IQueryPart
     {
         public QueryPartFilterType Type { get; set; }

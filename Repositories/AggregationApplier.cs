@@ -20,6 +20,7 @@ namespace LTuri.Abp.Application.Repositories
 
             // TODO: fully test everything (maybe with different types)
             // TODO: also return must be better formatted...
+            // TODO: doesn't comply to SOLID
             return aggregation.Type switch
             {
                 AggregationType.Avg => AggregationApplier<TEntity, TKey>.Avg(queryable, parameterExpression, expression),

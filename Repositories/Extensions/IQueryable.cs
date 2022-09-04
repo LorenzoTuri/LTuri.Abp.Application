@@ -23,6 +23,13 @@ namespace LTuri.Abp.Application.Repositories.Extensions
             return source;
         }
 
+        /// <summary>
+        /// TODO: 0 references? can be removed?
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="sorting"></param>
+        /// <returns></returns>
         public static IQueryable<T> Order<T>(this IQueryable<T> source, CriteriaSorting sorting)
         {
             var type = typeof(T);
@@ -35,7 +42,16 @@ namespace LTuri.Abp.Application.Repositories.Extensions
             );
         }
 
-
+        /// <summary>
+        /// TODO: find invariant case?
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="type"></param>
+        /// <param name="sorting"></param>
+        /// <param name="firstSortingCall"></param>
+        /// <returns></returns>
+        /// <exception cref="SortingByWrongParameterException"></exception>
         private static IQueryable<T> Order<T>(
             IQueryable<T> source,
             Type type,

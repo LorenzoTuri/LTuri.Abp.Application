@@ -2,6 +2,9 @@
 
 namespace LTuri.Abp.Application.Repositories.Criteria
 {
+    /// <summary>
+    /// TODO: By lowercase, do only when invariant case is implemented
+    /// </summary>
     public class CriteriaSorting
     {
         public string By { get; set; } = "Id";

@@ -42,6 +42,13 @@ namespace LTuri.Abp.Application.Repositories
             }
         }
 
+        /// <summary>
+        /// TODO: invariant case?
+        /// </summary>
+        /// <param name="queryable"></param>
+        /// <param name="filter"></param>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
         private Expression<Func<TEntity, bool>> DetectSimpleFilter(
             IEnumerable<TEntity> queryable,
             CriteriaFilter filter

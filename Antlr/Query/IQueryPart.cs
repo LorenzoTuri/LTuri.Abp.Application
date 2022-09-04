@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LTuri.Abp.Application.Antlr.Query
+﻿namespace LTuri.Abp.Application.Antlr.Query
 {
     public interface IQueryPart
     {

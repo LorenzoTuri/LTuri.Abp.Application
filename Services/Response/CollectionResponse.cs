@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
-using Volo.Abp.Application.Dtos;
-
-namespace LTuri.Abp.Application.Services.Response
+﻿namespace LTuri.Abp.Application.Services.Response
 {
+    /// <summary>
+    /// TODO: need other metadatas?
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class CollectionResponse<T>
     {
         public IEnumerable<T> Data { get; set; } = new List<T>();

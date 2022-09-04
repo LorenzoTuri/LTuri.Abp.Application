@@ -5,6 +5,7 @@ namespace LTuri.Abp.Application.Repositories.Criteria
     /// <summary>
     /// Rappresent a single filter
     /// Depending on Type, the properties Field, Value and Filters are used
+    /// TODO: Field lowecase, only after invariant case is implemented
     /// </summary>
     public class CriteriaFilter
     {

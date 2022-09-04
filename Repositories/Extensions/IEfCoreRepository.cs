@@ -4,6 +4,10 @@ using Volo.Abp.Domain.Repositories.EntityFrameworkCore;
 
 namespace LTuri.Abp.Application.Repositories.Extensions
 {
+    /// <summary>
+    /// TODO: can be written in another way? 
+    /// TODO: events?
+    /// </summary>
     public static class IEfCoreRepository
     {
         public static async Task<IEnumerable<string>> GetChangelogAndSaveAsync<TEntity, TKey>(

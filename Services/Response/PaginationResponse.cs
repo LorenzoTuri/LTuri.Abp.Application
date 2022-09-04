@@ -1,5 +1,8 @@
 ﻿namespace LTuri.Abp.Application.Services.Response
 {
+    /// <summary>
+    /// TODO: do we need UnfilteredTotal?
+    /// </summary>
     public class PaginationResponse
     {
         public long Total { get; set; } = 0;

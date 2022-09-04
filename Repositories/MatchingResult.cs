@@ -2,6 +2,10 @@
 
 namespace LTuri.Abp.Application.Repositories
 {
+    /// <summary>
+    /// TODO: do I need UnfilteredCount?
+    /// </summary>
+    /// <typeparam name="TEntity"></typeparam>
     public class MatchingResult<TEntity> : List<TEntity>
     {
         public long TotalCount { get; set; }

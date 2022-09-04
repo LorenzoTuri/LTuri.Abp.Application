@@ -1,6 +1,4 @@
-﻿using LTuri.Abp.Application.Repositories.Criteria;
-
-namespace LTuri.Abp.Application.Repositories.Criteria
+﻿namespace LTuri.Abp.Application.Repositories.Criteria
 {
     /// <summary>
     /// Rappresents filters on the IQueriable

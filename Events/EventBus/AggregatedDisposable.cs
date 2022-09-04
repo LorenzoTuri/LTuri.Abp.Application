@@ -2,6 +2,10 @@
 
 namespace LTuri.Abp.Application.Events.EventBus
 {
+    /// <summary>
+    /// Implementation for a multi-disposable disposable.
+    /// It's recognized as a normal disposable, but contains other disposables
+    /// </summary>
     public class AggregatedDisposable : IDisposable
     {
         protected IDisposable[] disposables;

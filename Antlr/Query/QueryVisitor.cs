@@ -1,6 +1,5 @@
 ﻿using Antlr4.Runtime;
 using Antlr4.Runtime.Misc;
-using Antlr4.Runtime.Tree;
 using LTuri.Abp.Application.Repositories.Criteria;
 
 namespace LTuri.Abp.Application.Antlr.Query

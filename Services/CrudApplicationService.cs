@@ -21,6 +21,8 @@ namespace LTuri.Abp.Application.Services
     /// - Different DTOs for the different routes
     /// - Event hadling, by using custom entity provided with types
     /// - Support for multiple entities for events, if needed
+    /// 
+    /// TODO: check if can be written in a better way
     /// </summary>
     /// <typeparam name="TEntity">Base entity to build auto-api</typeparam>
     /// <typeparam name="TGetOutputDto">DTO for single result</typeparam>
@@ -29,7 +31,6 @@ namespace LTuri.Abp.Application.Services
     /// <typeparam name="TUpdateInputDto">Input DTO for entity update</typeparam>
     /// <typeparam name="TEntityCreateEvent">Event triggered during creation</typeparam>
     /// <typeparam name="TEntityUpdateEvent">Event triggered during update</typeparam>
-    /// <typeparam name="TWebhookEventEntity">Queue used to manage events</typeparam>
     public class CrudApplicationService<
        // Entity config
        TEntity,
@@ -41,8 +42,7 @@ namespace LTuri.Abp.Application.Services
        TUpdateInputDto,
        // Event config
        TEntityCreateEvent,
-       TEntityUpdateEvent,
-       TWebhookEventEntity
+       TEntityUpdateEvent
        > : CrudApplicationService<
            TEntity,
            TGetOutputDto,
@@ -55,15 +55,14 @@ namespace LTuri.Abp.Application.Services
        where TListOutputDto : IEntityDto<Guid>
        where TEntityCreateEvent : AbstractEvent, new()
        where TEntityUpdateEvent : AbstractEvent, new()
-       where TWebhookEventEntity : class, IWebhookQueueEntity, IEntity, new()
     {
-        protected AggregatedEventBus<TWebhookEventEntity> eventBus;
+        protected AggregatedEventBus eventBus;
 
         public CrudApplicationService(
             IAbpLazyServiceProvider LazyServiceProvider,
             IEfCoreRepository<TEntity, Guid> repository,
             IObjectMapper objectMapper,
-            AggregatedEventBus<TWebhookEventEntity> eventBus
+            AggregatedEventBus eventBus
         ) : base(LazyServiceProvider, repository, objectMapper)
         {
             this.eventBus = eventBus;
@@ -93,6 +92,7 @@ namespace LTuri.Abp.Application.Services
         }
     }
 
+    /// <summary>
     /// Auto controller with:
     /// - Permission handling
     /// - Complex auto filters
@@ -165,7 +165,6 @@ namespace LTuri.Abp.Application.Services
         public async Task<TGetOutputDto> GetByIdentifierAsync(string identifier)
         {
             // TODO: find a better way, this way the full list is loaded into RAM before returning
-            // TODO: also not available in AbstractApplicationService, create route for it...
             var entity = (await repository.ToListAsync()).FirstOrDefault(x => x.Identifier == identifier);
             if (entity == null) throw new EntityNotFoundException(typeof(TEntity), identifier);
             return await base.GetAsync(entity.Id);

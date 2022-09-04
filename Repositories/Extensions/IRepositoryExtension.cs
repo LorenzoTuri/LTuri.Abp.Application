@@ -1,6 +1,4 @@
-﻿using Antlr4.Runtime;
-using LTuri.Abp.Application.Antlr.Query;
-using LTuri.Abp.Application.Repositories;
+﻿using LTuri.Abp.Application.Antlr.Query;
 using LTuri.Abp.Application.Repositories.Criteria.Enum;
 using Volo.Abp.Domain.Entities;
 using Volo.Abp.Domain.Repositories;
@@ -25,6 +23,7 @@ namespace LTuri.Abp.Application.Repositories.Extensions
 
             // Need to use the filters server side, not database side...
             // When ToString will be supported by EntityFramework, we can return to IQueryable and remove .Compile()
+            // TODO: check & implement with toString for better performances
             IEnumerable<TEntity> enumerable = queryable.AsEnumerable();
 
             // Apply pre aggregations

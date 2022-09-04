@@ -16,6 +16,9 @@ namespace LTuri.Abp.Application.Services
     /// <summary>
     /// Build an auto api with auto filters and event handler
     /// Full permissions are also respected
+    /// 
+    /// TODO: check if can be written in a different way (maybe differentiate into 2 different projects?)
+    /// TODO: do I maybe need rotues like count/ids?
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
     /// <typeparam name="TGetOutputDto"></typeparam>
@@ -24,7 +27,6 @@ namespace LTuri.Abp.Application.Services
     /// <typeparam name="TUpdateInputDto"></typeparam>
     /// <typeparam name="TEntityCreateEvent"></typeparam>
     /// <typeparam name="TEntityUpdateEvent"></typeparam>
-    /// <typeparam name="TWebhookEventEntity"></typeparam>
     public abstract class AbstractApplicationService<
         // Entity config
         TEntity,
@@ -36,15 +38,13 @@ namespace LTuri.Abp.Application.Services
         TUpdateInputDto,
         // Event config
         TEntityCreateEvent,
-        TEntityUpdateEvent,
-        TWebhookEventEntity
+        TEntityUpdateEvent
         > : ApplicationService
         where TEntity : class, IEntity<Guid>, IIdentifiableEntity
         where TGetOutputDto : IEntityDto<Guid>
         where TListOutputDto : IEntityDto<Guid>
         where TEntityCreateEvent : AbstractEvent, new()
         where TEntityUpdateEvent : AbstractEvent, new()
-        where TWebhookEventEntity : class, IWebhookQueueEntity, IEntity, new()
     {
         protected CrudApplicationService<
             TEntity,
@@ -53,15 +53,14 @@ namespace LTuri.Abp.Application.Services
             TCreateInputDto,
             TUpdateInputDto,
             TEntityCreateEvent,
-            TEntityUpdateEvent,
-            TWebhookEventEntity
+            TEntityUpdateEvent
         > ParentAppService;
 
         protected AbstractApplicationService(
             IAbpLazyServiceProvider lazyServiceProvider,
             IEfCoreRepository<TEntity, Guid> repository,
             IObjectMapper objectMapper,
-            AggregatedEventBus<TWebhookEventEntity> eventBus
+            AggregatedEventBus eventBus
         ) : base()
         {
             this.ParentAppService = new CrudApplicationService<
@@ -71,8 +70,7 @@ namespace LTuri.Abp.Application.Services
                 TCreateInputDto,
                 TUpdateInputDto,
                 TEntityCreateEvent,
-                TEntityUpdateEvent,
-                TWebhookEventEntity
+                TEntityUpdateEvent
             >(lazyServiceProvider, repository, objectMapper, eventBus);
         }
 
@@ -80,7 +78,17 @@ namespace LTuri.Abp.Application.Services
             return new SingleResponse<TGetOutputDto>(await ParentAppService.GetAsync(id));
         }
 
-        public async Task<CollectionResponse<TListOutputDto>> GetListAsync(Criteria input)
+        public async Task<SingleResponse<TGetOutputDto>> GetByIdentifierAsync(string identifier)
+        {
+            return new SingleResponse<TGetOutputDto>(await ParentAppService.GetByIdentifierAsync(identifier));
+        }
+
+        public Task<CollectionResponse<TListOutputDto>> GetListAsync(Criteria input)
+        {
+            return PostSearchAsync(input);
+        }
+
+        public async Task<CollectionResponse<TListOutputDto>> PostSearchAsync(Criteria input)
         {
             var response = await ParentAppService.MatchingAsync(input);
             return new CollectionResponse<TListOutputDto>()
@@ -95,11 +103,6 @@ namespace LTuri.Abp.Application.Services
                 },
                 Aggregations = response.Aggregations
             };
-        }
-
-        public Task<CollectionResponse<TListOutputDto>> PostSearchAsync(Criteria input)
-        {
-            return GetListAsync(input);
         }
 
         public async Task<SingleResponse<TGetOutputDto>> CreateAsync(TCreateInputDto input)
@@ -169,7 +172,17 @@ namespace LTuri.Abp.Application.Services
             return new SingleResponse<TGetOutputDto>(await ParentAppService.GetAsync(id));
         }
 
-        public async Task<CollectionResponse<TListOutputDto>> GetListAsync(Criteria input)
+        public async Task<SingleResponse<TGetOutputDto>> GetByIdentifierAsync(string identifier)
+        {
+            return new SingleResponse<TGetOutputDto>(await ParentAppService.GetByIdentifierAsync(identifier));
+        }
+
+        public Task<CollectionResponse<TListOutputDto>> GetListAsync(Criteria input)
+        {
+            return PostSearchAsync(input);
+        }
+
+        public async Task<CollectionResponse<TListOutputDto>> PostSearchAsync(Criteria input)
         {
             var response = await ParentAppService.MatchingAsync(input);
             return new CollectionResponse<TListOutputDto>()
@@ -184,11 +197,6 @@ namespace LTuri.Abp.Application.Services
                 },
                 Aggregations = response.Aggregations
             };
-        }
-
-        public Task<CollectionResponse<TListOutputDto>> PostSearchAsync(Criteria input)
-        {
-            return GetListAsync(input);
         }
 
         public async Task<SingleResponse<TGetOutputDto>> CreateAsync(TCreateInputDto input)
